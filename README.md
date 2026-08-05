@@ -14,7 +14,7 @@ For full documentation, guides, and hardware information, visit [sailtech.dk](ht
 
 This firmware is written and configured specifically for the following board:
 
-* **[SK PANG ESP32S3 CAN-Bus Board](https://www.skpang.co.uk)** (ESP32-S3 with onboard TWAI/CAN transceiver)
+* **[SK PANG ESP32S3 CAN-Bus Board](https://www.skpang.co.uk/products/esp32s3-can-bus-board)** (ESP32-S3 with onboard TWAI/CAN transceiver)
 
 ## 📐 Custom Enclosure
 
