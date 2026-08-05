@@ -16,7 +16,6 @@ This firmware is written and configured specifically for the following board:
 
 * **[SK PANG ESP32S3 CAN-Bus Board](https://www.skpang.co.uk)** (ESP32-S3 with onboard TWAI/CAN transceiver)
 
-
 ## 📐 Custom Enclosure
 
 A custom 3D-printable protective enclosure is designed specifically for housing the SK PANG ESP32S3 CAN-Bus board on board your boat.
@@ -31,6 +30,15 @@ If you find this project useful for your sailing setup, consider supporting futu
 
 👉 **[Buy Me a Coffee](https://www.buymeacoffee.com/sailtech)**
 
+## ⚡ Initial Firmware Flashing
+In case you aquired the hardware yourself and you need todo the initial flashing of the firmware yourself:
+1. Download the 3 .bin files from the /initial-flash folder together with the latest firmware release file
+2. Install the esptool for your specific platform
+3. Connect the board via USB to your computer and identify which serial port the board is connected to. In the example below it is `/dev/cu.usbserial-7D52B70115`
+4. Execute the following command to flash the firmware:
+`python esptool.py --chip esp32s3 --port "/dev/cu.usbserial-7D52B70115" --baud 460800 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin`
+
+5. For subsequent firmware updates you can use the OTA method desribed on [sailtech.dk]](sailtech.dk), where you only need the latest firmware.bin file.
 
 ## 📦 Third-Party Libraries & Dependencies
 
@@ -38,7 +46,6 @@ This project relies on the following open-source libraries:
 
 * [ttlappalainen/NMEA2000](https://github.com/ttlappalainen/NMEA2000) – Core NMEA2000 library for Arduino framework.
 * [sergei/NMEA2000_esp32_twai](https://github.com/sergei/NMEA2000_esp32_twai) – ESP32 TWAI (Two-Wire Automotive Interface / CAN) driver implementation.
-
 
 ## 📜 License
 
