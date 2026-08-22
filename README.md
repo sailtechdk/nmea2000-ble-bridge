@@ -32,11 +32,23 @@ If you find this project useful for your sailing setup, consider supporting futu
 
 ## ⚡ Initial Firmware Flashing
 In case you aquired the hardware yourself and you need todo the initial flashing of the firmware yourself:
+There are two approaches to achieve this:
+***Easy***
+1. You need a Google Chrome Browser
+2. Connect your board via USB to your computer
+3. Open the [Web Flash Utility](https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/config.toml)
+4. Click "Connect Your Device"
+5. Select you connected board
+6. Click Connect and the flashing process will start
+
+***Advanced***
 1. Download the 3 .bin files from the /initial-flash folder together with the latest firmware release file
 2. Install the esptool for your specific platform
 3. Connect the board via USB to your computer and identify which serial port the board is connected to. In the example below it is `/dev/cu.usbserial-7D52B70115`
 4. Execute the following command to flash the firmware:
 `python esptool.py --chip esp32s3 --port "/dev/cu.usbserial-7D52B70115" --baud 460800 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin`
+
+https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/config.toml
 
 5. For subsequent firmware updates you can use the OTA method desribed on [sailtech.dk]](sailtech.dk), where you only need the latest firmware.bin file.
 
