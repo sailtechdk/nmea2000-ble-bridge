@@ -33,13 +33,15 @@ If you find this project useful for your sailing setup, consider supporting futu
 ## ⚡ Initial Firmware Flashing
 In case you aquired the hardware yourself and you need todo the initial flashing of the firmware yourself:
 There are two approaches to achieve this:
+
 ***Easy***
 1. You need a Google Chrome Browser
 2. Connect your board via USB to your computer
 3. Open the [Web Flash Utility](https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/config.toml)
-4. Click "Connect Your Device"
+4. Click *Connect Your Device*
 5. Select you connected board
-6. Click Connect and the flashing process will start
+6. Click *Connect* and the flashing process will start
+7. Click *Restart Device* and after a few seconds you should see `Starting SailorData Bridge...`. You can ignore the `nvs_open failed` error.
 
 ***Advanced***
 1. Download the 3 .bin files from the /initial-flash folder together with the latest firmware release file
