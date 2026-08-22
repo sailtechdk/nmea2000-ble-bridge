@@ -1,0 +1,26 @@
+# ============================================================================
+# ESP Launchpad - Minimal Launchpad Configuration Template
+# ============================================================================
+# This TOML file is specifically designed for the minimal-launchpad interface.
+# Usage: https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=<YOUR_TOML_URL>
+#
+# IMPORTANT: All URLs in this file (including the TOML file URL itself) must be
+# publicly accessible and CORS-enabled to avoid cross-origin request issues.
+# Recommended hosting: GitHub Pages, GitHub Raw URLs, or any CDN with CORS support.
+# ============================================================================
+
+esp_toml_version = 1.0
+
+supported_apps = ["SailorData"]
+multipart = true
+chip = "esp32"
+
+[SailorData]
+icon = "https://sailtech.dk/assets/logo.png"
+image.esp32.parts = [
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/bootloader.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/partitions.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/boot_app0.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/firmware-1.1.bin"
+ ]
+ image.esp32.addresses = ["0x0000", "0x8000", "0xe000", "0x10000"]
