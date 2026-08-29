@@ -44,7 +44,7 @@ There are two approaches to achieve this:
 7. Click *Restart Device* and after a few seconds you should see `Starting SailorData Bridge...`. You can ignore the `nvs_open failed` error.
 
 ***Advanced***
-1. Download the 3 .bin files from the /initial-flash folder together with the latest firmware release file
+1. Download the 4 .bin files from the /initial-flash folder which includes the latest firmware release file
 2. Install the esptool for your specific platform
 3. Connect the board via USB to your computer and identify which serial port the board is connected to. In the example below it is `/dev/cu.usbserial-7D52B70115`
 4. Execute the following command to flash the firmware:
