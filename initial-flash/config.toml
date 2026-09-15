@@ -21,6 +21,6 @@ image.esp32.parts = [
      "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/bootloader.bin",
      "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/partitions.bin",
      "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/boot_app0.bin",
-     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/firmware-1.1.bin"
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/firmware-1.2.bin"
  ]
  image.esp32.addresses = ["0x0000", "0x8000", "0xe000", "0x10000"]
