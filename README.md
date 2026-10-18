@@ -4,19 +4,21 @@ This repository contains the official firmware for the **SailorData NMEA2000 to 
 
 For full documentation, guides, and hardware information, visit [sailtech.dk](https://sailtech.dk).
 
-## 🚀 Key Features
+## Key Features
 
 * **NMEA2000 Engine Parsing:** Reads and processes standard NMEA2000 PGNs from your boat network.
 * **Low-Latency BLE Broadcast:** Transmits marine data efficiently via Bluetooth Low Energy (BLE) to compatible Garmin devices.
+* **NMEA to WIFI Router:** Transmits NMEA2000 PGNs via Wifi, so that apps like Navionics, OpenCPN, etc. can connect to the bridge via wifi and consume this data.
+* **Polar Diagram:** Wifi hotspot which allows the real-time monitoring of marine telemetry and polar performance on the polar diagram.
 * **Plug & Play:** Custom-designed to compile cleanly for target CAN-bus hardware.
 
-## 🛠️ Hardware Requirements
+## Hardware Requirements
 
 This firmware is written and configured specifically for the following board:
 
 * **[SK PANG ESP32S3 CAN-Bus Board](https://www.skpang.co.uk/products/esp32s3-can-bus-board)** (ESP32-S3 with onboard TWAI/CAN transceiver)
 
-## 📐 Custom Enclosure
+## Custom Enclosure
 
 A custom 3D-printable protective enclosure is designed specifically for housing the SK PANG ESP32S3 CAN-Bus board on board your boat.
 
@@ -24,13 +26,13 @@ A custom 3D-printable protective enclosure is designed specifically for housing 
 
 The 3D model STL files are provided in the `/enclosure` folder and are shared under the **Creative Commons License (CC BY-NC-SA 4.0)**. Feel free to download and print the enclosure for personal marine setups.
 
-## ☕ Support the Project
+## Support the Project
 
 If you find this project useful for your sailing setup, consider supporting future development:
 
 👉 **[Buy Me a Coffee](https://www.buymeacoffee.com/sailtech)**
 
-## ⚡ Initial Firmware Flashing
+## Initial Firmware Flashing
 In case you aquired the hardware yourself and you need todo the initial flashing of the firmware yourself:
 There are two approaches to achieve this:
 
@@ -54,14 +56,16 @@ https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=http
 
 5. For subsequent firmware updates you can use the OTA method desribed on [sailtech.dk]](sailtech.dk), where you only need the latest firmware.bin file.
 
-## 📦 Third-Party Libraries & Dependencies
+## Third-Party Libraries & Dependencies
 
 This project relies on the following open-source libraries:
 
 * [ttlappalainen/NMEA2000](https://github.com/ttlappalainen/NMEA2000) – Core NMEA2000 library for Arduino framework.
 * [sergei/NMEA2000_esp32_twai](https://github.com/sergei/NMEA2000_esp32_twai) – ESP32 TWAI (Two-Wire Automotive Interface / CAN) driver implementation.
 
-## 📜 License
+## License
+© 2026 SailTech,
+Author: Carsten Horst
 
 * **Firmware:** Licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full details.
 * **3D Models & Enclosure Designs:** Licensed under **Creative Commons ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))**.
