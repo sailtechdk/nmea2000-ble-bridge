@@ -17,6 +17,7 @@ For full documentation, guides, and hardware information, visit [sailtech.dk](ht
 This firmware is written and configured specifically for the following board:
 
 * **[SK PANG ESP32S3 CAN-Bus Board](https://www.skpang.co.uk/products/esp32s3-can-bus-board)** (ESP32-S3 with onboard TWAI/CAN transceiver)
+* **[Waveshare ESP32 S3 RS485 CAN-Bus DIN Rail module](https://www.waveshare.com/esp32-s3-rs485-can.htm)** (I have not tested this board myself, but on request of some people I have build the firmware for this board)
 
 ## Custom Enclosure
 
@@ -39,22 +40,20 @@ There are two approaches to achieve this:
 ***Easy***
 1. You need a Google Chrome Browser
 2. Connect your board via USB to your computer
-3. Open the [Web Flash Utility](https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/config.toml)
+3. Open the [Web Flash Utility](https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/firmware/config.toml)
 4. Click *Connect Your Device*
 5. Select you connected board
 6. Click *Connect* and the flashing process will start
 7. Click *Restart Device* and after a few seconds you should see `Starting SailorData Bridge...`. You can ignore the `nvs_open failed` error.
 
 ***Advanced***
-1. Download the 4 .bin files from the /initial-flash folder which includes the latest firmware release file
+1. Download the 4 .bin files from the /firmware folder which includes the latest firmware release file. The folder ESP32S3-CAN-N2K contains the the firmware for the SK Pang board, where the folder ESP32-S3-RS485-CAN contains the Waveshare DIN-Rail board.
 2. Install the esptool for your specific platform
 3. Connect the board via USB to your computer and identify which serial port the board is connected to. In the example below it is `/dev/cu.usbserial-7D52B70115`
 4. Execute the following command to flash the firmware:
 `python esptool.py --chip esp32s3 --port "/dev/cu.usbserial-7D52B70115" --baud 460800 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 bootloader.bin 0x8000 partitions.bin 0xe000 boot_app0.bin 0x10000 firmware.bin`
 
-https://espressif.github.io/esp-launchpad/minimal-launchpad/?flashConfigURL=https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/config.toml
-
-5. For subsequent firmware updates you can use the OTA method desribed on [sailtech.dk]](sailtech.dk), where you only need the latest firmware.bin file.
+5. For subsequent firmware updates you can use the OTA method desribed on [sailtech.dk](https://sailtech.dk), where you only need the latest firmware.bin file.
 
 ## Third-Party Libraries & Dependencies
 
