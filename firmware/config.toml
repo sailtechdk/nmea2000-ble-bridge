@@ -13,14 +13,14 @@ esp_toml_version = 1.0
 
 supported_apps = ["SailorData"]
 multipart = true
-chip = "esp32"
+chip = "esp32-s3"
 
 [SailorData]
 icon = "https://sailtech.dk/assets/logo.png"
-image.esp32.parts = [
-     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/bootloader.bin",
-     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/partitions.bin",
-     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/boot_app0.bin",
-     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/initial-flash/firmware-1.3.bin"
+image.esp32-s3.parts = [
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/firmware/bootloader.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/firmware/partitions.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/firmware/boot_app0.bin",
+     "https://raw.githubusercontent.com/sailtechdk/nmea2000-ble-bridge/refs/heads/main/firmware/ESP32S3-CAN-N2K/firmware-1.3.bin"
  ]
- image.esp32.addresses = ["0x0000", "0x8000", "0xe000", "0x10000"]
+ image.ESP32-S3.addresses = ["0x0000", "0x8000", "0xe000", "0x10000"]
