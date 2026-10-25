@@ -10,6 +10,7 @@ For full documentation, guides, and hardware information, visit [sailtech.dk](ht
 * **Low-Latency BLE Broadcast:** Transmits marine data efficiently via Bluetooth Low Energy (BLE) to compatible Garmin devices.
 * **NMEA to WIFI Router:** Transmits NMEA2000 PGNs via Wifi, so that apps like Navionics, OpenCPN, etc. can connect to the bridge via wifi and consume this data.
 * **Polar Diagram:** Wifi hotspot which allows the real-time monitoring of marine telemetry and polar performance on the polar diagram.
+* **Victron Energy:** The bridge reads live data from Victron Energy devices — including battery monitors, solar chargers, DC-DC converters, AC inverters, and AC chargers — via Bluetooth Low Energy (BLE) and sends it directly to your NMEA 2000 network for display on any chartplotter or instrument. 
 * **Plug & Play:** Custom-designed to compile cleanly for target CAN-bus hardware.
 
 ## Hardware Requirements
@@ -66,5 +67,5 @@ This project relies on the following open-source libraries:
 © 2026 SailTech,
 Author: Carsten Horst
 
-* **Firmware:** Licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full details.
+* **Firmware:** All rights reserved. See [SailTech terms and conditions](https://sailtech.dk/terms.html).
 * **3D Models & Enclosure Designs:** Licensed under **Creative Commons ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/))**.
