@@ -2,7 +2,7 @@
 
 This repository contains the official ESP32-S3 firmware for the **[SailorData NMEA 2000 Bridge & Gateway](https://sailtech.dk/)**. Designed for **sailing and Garmin** enthusiasts, it bridges live **NMEA 2000 (`NMEA2000`)** marine network data directly to your **Garmin marine watch**, streams **NMEA 2000 to Wi-Fi** for navigation apps, calculates **real-time sail performance** from your boat's polars, and integrates **Victron to NMEA 2000** over Bluetooth Low Energy (BLE).
 
-Pair the bridge with the free **[SailorData Garmin Marine Watch App on Connect IQ](https://apps.garmin.com/apps/7a1684d6-6b95-4c80-97c7-f928c7ab4e5a)** to view live boat telemetry on your wrist—working across **B&G, Raymarine, Simrad, Furuno, and Garmin** NMEA 2000 networks without ecosystem lock-in.
+Pair the bridge with the free **[SailorData Garmin Marine Watch Datafield on Connect IQ](https://apps.garmin.com/apps/7a1684d6-6b95-4c80-97c7-f928c7ab4e5a)** or the **[SailorData Garmin Marine standalone Watch App](https://apps.garmin.com/apps/0fa1eb91-6a20-4201-9461-50bed69e42ec)** to view live boat telemetry on your wrist—working across **B&G, Raymarine, Simrad, Furuno, and Garmin** NMEA 2000 networks without ecosystem lock-in.
 
 - **Official Website, Pre-Assembled Hardware & Documentation:** **[sailtech.dk — Garmin Marine Watch App, NMEA 2000 to Wi-Fi Gateway & Victron Bridge](https://sailtech.dk/)**
 - **Live Web Interface & Polar Chart Preview:** **[Interactive SailorData Bridge Web UI Demo](https://sailtech.dk/demo)**
@@ -10,10 +10,11 @@ Pair the bridge with the free **[SailorData Garmin Marine Watch App on Connect I
 
 ## Key Features
 
-* **Garmin Marine Watch App & Low-Latency BLE Broadcast:** Transmits real-time NMEA 2000 marine telemetry (`SOG`, `STW`, `COG`, `HDG`, `AWS`/`AWA`, `TWS`/`TWA`/`TWD`, `VMG`, `VMC`, `XTE`, `DTW`, `BRG`, `Depth`, and `Rudder Angle`) via Bluetooth Low Energy (BLE) directly to compatible Garmin smartwatches—no Garmin chartplotter required.
+* **Garmin Marine Watch App & Low-Latency BLE Broadcast:** Transmits real-time NMEA 2000 marine telemetry (`SOG`, `STW`, `COG`, `HDG`, `AWS`/`AWA`, `TWS`/`TWA`/`TWD`, `VMG`, `VMC`, `XTE`, `DTW`, `BRG`, `Depth`, `Drift` and `Rudder Angle`) via Bluetooth Low Energy (BLE) directly to compatible Garmin smartwatches—no Garmin chartplotter required.
 * **NMEA 2000 to Wi-Fi Bridge / Gateway:** Acts as a wireless **NMEA to Wi-Fi router and gateway**, translating NMEA 2000 PGNs into NMEA 0183 sentences streamed over Wi-Fi (`TCP`/`UDP`) so navigation apps like **Navionics Boating**, **OpenCPN**, **Savvy Navvy**, **iSailor**, and **Aqua Map** can consume live GPS, AIS, wind, depth, and speed data on tablets, phones, and laptops.
 * **Victron to NMEA 2000 (`NMEA2000`) Integration:** Reads live electrical telemetry from **Victron Energy** devices—including battery monitors (**SmartShunt**, **BMV-712**), solar controllers (**SmartSolar MPPT**), **Orion-Tr Smart** DC-DC converters, AC inverters, and **Blue Smart** chargers—wirelessly via Bluetooth Low Energy (BLE Instant Readout) and broadcasts standard NMEA 2000 PGNs onto your backbone for display on any chartplotter or MFD.
 * **Real-Time Sail Performance & Polar Diagram:** Built-in Wi-Fi web server and polar engine compute real-time **sail performance** and polar efficiency percentage (`STW` vs. theoretical target boat speed for current `TWS` and `TWA`), displaying live target speed efficiency and tactical upwind/downwind layline arcs on your Garmin watch and on the browser-based polar diagram.
+* **Control your Raymarine ST1000+/2000+ tillerpilot** from a B&G Triton2 / Vulcan / Zeus display (experimental feature). The bridge is emulating a Simrad AC12 autopilot for the B&G display and translates the commands to a Raymarine tillerpilot which is connected via a Seatalk to NMEA 2000 konverter (ST1 to StNG converter and NMEA 2000 adapter cable).
 * **Universal NMEA 2000 Engine Parsing & Plug-and-Play:** Reads and processes standard NMEA 2000 PGNs from any multi-vendor boat network, powered directly from the 12V NMEA 2000 backbone.
 
 ## Hardware Requirements
