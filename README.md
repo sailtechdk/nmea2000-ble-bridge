@@ -1,5 +1,9 @@
 # SailorData: NMEA 2000 to BLE, Wi-Fi Bridge & Victron Gateway for Garmin Marine Watches
 
+[![Garmin Connect IQ](https://img.shields.io/badge/Garmin_Connect_IQ_App-v1.0_(Nov_10,_2026)-007acc?logo=garmin&logoColor=white)](https://apps.garmin.com/apps/0fa1eb91-6a20-4201-9461-50bed69e42ec)
+[![Garmin Connect IQ](https://img.shields.io/badge/Garmin_Connect_IQ_Datafield-v1.8_(Nov_10,_2026)-007acc?logo=garmin&logoColor=white)](https://apps.garmin.com/apps/7a1684d6-6b95-4c80-97c7-f928c7ab4e5a)
+[![Bridge Firmware](https://img.shields.io/badge/Bridge_Firmware-v1.6_(Nov_11,_2026)-2ea44f?logo=github&logoColor=white)](https://github.com/sailtechdk/nmea2000-ble-bridge/releases)
+
 This repository contains the official ESP32-S3 firmware for the **[SailorData NMEA 2000 Bridge & Gateway](https://sailtech.dk/)**. Designed for **sailing and Garmin** enthusiasts, it bridges live **NMEA 2000 (`NMEA2000`)** marine network data directly to your **Garmin marine watch**, streams **NMEA 2000 to Wi-Fi** for navigation apps, calculates **real-time sail performance** from your boat's polars, and integrates **Victron to NMEA 2000** over Bluetooth Low Energy (BLE).
 
 Pair the bridge with the free **[SailorData Garmin Marine Watch Datafield on Connect IQ](https://apps.garmin.com/apps/7a1684d6-6b95-4c80-97c7-f928c7ab4e5a)** or the **[SailorData Garmin Marine standalone Watch App](https://apps.garmin.com/apps/0fa1eb91-6a20-4201-9461-50bed69e42ec)** to view live boat telemetry on your wrist—working across **B&G, Raymarine, Simrad, Furuno, and Garmin** NMEA 2000 networks without ecosystem lock-in.
